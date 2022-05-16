@@ -26,7 +26,7 @@
         />
         <button type="button" class="save__name player1">GO!</button>
       </div>
-      <h1 class="header__el1 game__name">Connect Four</h1>
+      <div class="header__el1 game__name"><h1>Connect Four</h1></div>
       <div class="header__el input__player2">
         <h4 class="enter__name2">Enter your name</h4>
         <a type="button"></a>
@@ -41,11 +41,11 @@
     </header>
     <section class="section">
       <div class="section__el player__panel yellow__player">
-        <h3>Yellow Player</h3>
-        <h4 class="name__player1">Name</h4>
-        <div class="player1__moves">Moves: 0</div>
-        <div class="player1__cur">Current score: 21</div>
-        <div class="player1__score">Total score: 0</div>
+        <p>Yellow Player</p>
+        <p class="name__player1">Name</p>
+        <p class="player1__moves">Moves: 0</p>
+        <p class="player1__cur">Current score: 21</p>
+        <p class="player1__score">Total score: 0</p>
       </div>
       <div class="section__el grid__table">
         <div class="grid__el box_A_6" id="A"></div>
@@ -90,21 +90,43 @@
         <div class="grid__el box_E_1" id="E"></div>
         <div class="grid__el box_F_1" id="F"></div>
         <div class="grid__el box_G_1" id="G"></div>
+        <div class="overlay">
+          <div class="instructions">
+            <h1>Instructions</h1>
+            <p>
+              1. You need to enter names of two players into the fields above to
+              start the game.
+            </p>
+            <p>
+              2. To win the game, you need to build a 4-circles line of your
+              color. Towers are filled bottom to top.
+            </p>
+            <p>
+              3. Current score shows how many points you currently have. The
+              fewer moves you make, the more points are saved. Once the player
+              wins, the remaining points are saved in the total score. The loser
+              does not get any points in his bank though. Victory is not only
+              about how many times you connect four, but also about how many
+              points you manage to save.
+            </p>
+            <p class="greeting">Have Fun!</p>
+            <p class="greeting">Dmitriy Vnuchkov</p>
+          </div>
+        </div>
       </div>
-      <div class="overlay"></div>
       <div class="modal hidden">
-        <h2>CONGRATULATIONS!</h2>
-        <h3 class="winner__name"></h3>
+        <h1>CONGRATULATIONS!</h1>
+        <p class="winner__name"></p>
         <button type="button" class="btn__newGame buttonz">
           Start a New Game
         </button>
       </div>
       <div class="section__el player__panel red__player">
-        <h3>Red Player</h3>
-        <h4 class="name__player2">Name</h4>
-        <div class="player2__moves">Moves: 0</div>
-        <div class="player2__cur">Current score: 21</div>
-        <div class="player2__score">Total score: 0</div>
+        <p>Red Player</p>
+        <p class="name__player2">Name</p>
+        <p class="player2__moves">Moves: 0</p>
+        <p class="player2__cur">Current score: 21</p>
+        <p class="player2__score">Total score: 0</p>
       </div>
       <div class="modal2 hidden">
         <h3>
@@ -119,7 +141,7 @@
           </button>
         </div>
       </div>
-      <span class="copyright"><p>Copyright: Dmitriy Vnuchkov</p></span>
+      <!-- <span class="copyright"><p>Copyright: Dmitriy Vnuchkov</p></span> -->
     </section>
   </body>
 </html>

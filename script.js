@@ -49,6 +49,21 @@ let currentScoreP2 = 21;
 let totalScore1 = 0;
 let totalScore2 = 0;
 
+const showHideElement = function (el, to) {
+  if (to === "show") {
+    el.classList.remove("hidden");
+    setTimeout(function () {
+      el.style.opacity = 1;
+    }, 50);
+  }
+  if (to === "hide") {
+    el.style.opacity = 0;
+    setTimeout(function () {
+      el.classList.add("hidden");
+    }, 350);
+  }
+};
+
 //function to start a new game
 const startNewGame = function () {
   if (result === "Yellow") {
@@ -58,8 +73,8 @@ const startNewGame = function () {
   }
   result = "";
   color = "Yellow";
-  blur.classList.add("hidden");
-  endGameModal.classList.add("hidden");
+  showHideElement(blur, "hide");
+  showHideElement(endGameModal, "hide");
   grid = [
     [" ", " ", " ", " ", " ", " "],
     [" ", " ", " ", " ", " ", " "],
@@ -155,8 +170,8 @@ gridArea.addEventListener("click", function (e) {
           : `${namePlayer2.textContent} is the winner!`
       }`;
       console.log(`The Winner is ${result}`);
-      blur.classList.remove("hidden");
-      endGameModal.classList.remove("hidden");
+      showHideElement(blur, "show");
+      showHideElement(endGameModal, "show");
     }
   }
 });
@@ -167,7 +182,8 @@ document.addEventListener("keyup", function (e) {
     startNewGame();
   }
   if (e.key === "Escape" && !resetGameModal.classList.contains("hidden")) {
-    resetGameModal.classList.add("hidden");
+    // resetGameModal.classList.add("hidden");
+    showHideElement(resetGameModal, "hide");
   }
 });
 btnNewGame.addEventListener("click", function (e) {
@@ -177,15 +193,20 @@ btnNewGame.addEventListener("click", function (e) {
 
 //Reset the Game / Cancel gameReset
 title.addEventListener("click", function () {
-  blur.classList.remove("hidden");
-  resetGameModal.classList.remove("hidden");
+  // blur.classList.remove("hidden");
+  // resetGameModal.classList.remove("hidden");
+  showHideElement(blur, "show");
+  showHideElement(resetGameModal, "show");
 });
 resetGame.addEventListener("click", function () {
   location.reload();
 });
+
 noResetGame.addEventListener("click", function () {
-  resetGameModal.classList.add("hidden");
-  blur.classList.add("hidden");
+  // resetGameModal.classList.add("hidden");
+  showHideElement(resetGameModal, "hide");
+  // blur.classList.add("hidden");
+  showHideElement(blur, "hide");
 });
 /////////////////////// Game Mechanics //////////////////////
 function whoIsWinner(move) {
@@ -301,14 +322,22 @@ function saveName1() {
   namePlayer1.textContent = `${inputNameP1.value.toUpperCase()}`;
   inputNameP1.value = "";
   inputFieldP1.classList.add("hidden1");
-  if (namePlayer2.textContent !== "Name") blur.classList.add("hidden");
+  if (namePlayer2.textContent !== "Name") {
+    //  blur.classList.add("hidden");
+    showHideElement(blur, "hide");
+    document.querySelector(".instructions").classList.add("hidden");
+  }
 }
 
 function saveName2() {
   namePlayer2.textContent = `${inputNameP2.value.toUpperCase()}`;
   inputNameP2.value = "";
   inputFieldP2.classList.add("hidden1");
-  if (namePlayer1.textContent !== "Name") blur.classList.add("hidden");
+  if (namePlayer1.textContent !== "Name") {
+    // blur.classList.add("hidden");
+    showHideElement(blur, "hide");
+    document.querySelector(".instructions").classList.add("hidden");
+  }
 }
 
 // CHANGING COLORS OF THE GRID SHADOW
