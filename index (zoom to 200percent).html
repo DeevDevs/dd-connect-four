@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.75" />
+    <meta http-equiv="X-UA_Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Connect Four</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="body__box">
+    <header class="header">
+      <div class="header__el input__player1">
+        <h4 class="enter__name">Enter your name</h4>
+        <a type="button"></a>
+        <input
+          type="text"
+          name="Name"
+          placeholder="Player 1"
+          class="header__input input__name__player1"
+        />
+        <button type="button" class="save__name player1">GO!</button>
+      </div>
+      <h1 class="header__el1 game__name">Connect Four</h1>
+      <div class="header__el input__player2">
+        <h4 class="enter__name2">Enter your name</h4>
+        <a type="button"></a>
+        <input
+          type="text"
+          name="Name"
+          placeholder="Player 2"
+          class="header__input input__name__player2"
+        />
+        <button type="button" class="save__name player2">GO!</button>
+      </div>
+    </header>
+    <section class="section">
+      <div class="section__el player__panel yellow__player">
+        <h3>Yellow Player</h3>
+        <h4 class="name__player1">Name</h4>
+        <div class="player1__moves">Moves: 0</div>
+        <div class="player1__cur">Current score: 21</div>
+        <div class="player1__score">Total score: 0</div>
+      </div>
+      <div class="section__el grid__table">
+        <div class="grid__el box_A_6" id="A"></div>
+        <div class="grid__el box_B_6" id="B"></div>
+        <div class="grid__el box_C_6" id="C"></div>
+        <div class="grid__el box_D_6" id="D"></div>
+        <div class="grid__el box_E_6" id="E"></div>
+        <div class="grid__el box_F_6" id="F"></div>
+        <div class="grid__el box_G_6" id="G"></div>
+        <div class="grid__el box_A_5" id="A"></div>
+        <div class="grid__el box_B_5" id="B"></div>
+        <div class="grid__el box_C_5" id="C"></div>
+        <div class="grid__el box_D_5" id="D"></div>
+        <div class="grid__el box_E_5" id="E"></div>
+        <div class="grid__el box_F_5" id="F"></div>
+        <div class="grid__el box_G_5" id="G"></div>
+        <div class="grid__el box_A_4" id="A"></div>
+        <div class="grid__el box_B_4" id="B"></div>
+        <div class="grid__el box_C_4" id="C"></div>
+        <div class="grid__el box_D_4" id="D"></div>
+        <div class="grid__el box_E_4" id="E"></div>
+        <div class="grid__el box_F_4" id="F"></div>
+        <div class="grid__el box_G_4" id="G"></div>
+        <div class="grid__el box_A_3" id="A"></div>
+        <div class="grid__el box_B_3" id="B"></div>
+        <div class="grid__el box_C_3" id="C"></div>
+        <div class="grid__el box_D_3" id="D"></div>
+        <div class="grid__el box_E_3" id="E"></div>
+        <div class="grid__el box_F_3" id="F"></div>
+        <div class="grid__el box_G_3" id="G"></div>
+        <div class="grid__el box_A_2" id="A"></div>
+        <div class="grid__el box_B_2" id="B"></div>
+        <div class="grid__el box_C_2" id="C"></div>
+        <div class="grid__el box_D_2" id="D"></div>
+        <div class="grid__el box_E_2" id="E"></div>
+        <div class="grid__el box_F_2" id="F"></div>
+        <div class="grid__el box_G_2" id="G"></div>
+        <div class="grid__el box_A_1" id="A"></div>
+        <div class="grid__el box_B_1" id="B"></div>
+        <div class="grid__el box_C_1" id="C"></div>
+        <div class="grid__el box_D_1" id="D"></div>
+        <div class="grid__el box_E_1" id="E"></div>
+        <div class="grid__el box_F_1" id="F"></div>
+        <div class="grid__el box_G_1" id="G"></div>
+      </div>
+      <div class="overlay"></div>
+      <div class="modal hidden">
+        <h2>CONGRATULATIONS!</h2>
+        <h3 class="winner__name"></h3>
+        <button type="button" class="btn__newGame buttonz">
+          Start a New Game
+        </button>
+      </div>
+      <div class="section__el player__panel red__player">
+        <h3>Red Player</h3>
+        <h4 class="name__player2">Name</h4>
+        <div class="player2__moves">Moves: 0</div>
+        <div class="player2__cur">Current score: 21</div>
+        <div class="player2__score">Total score: 0</div>
+      </div>
+      <div class="modal2 hidden">
+        <h3>
+          Are you sure you want to clear all the records and reset the game?
+        </h3>
+        <div class="btns__reset">
+          <button type="button" class="btn__reset__yes buttonz">
+            Yes, reset the game
+          </button>
+          <button type="button" class="btn__reset__no buttonz">
+            No, back to the game
+          </button>
+        </div>
+      </div>
+      <span class="copyright"><p>Copyright: Dmitriy Vnuchkov</p></span>
+    </section>
+  </body>
+</html>

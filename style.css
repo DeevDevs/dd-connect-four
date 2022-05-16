@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Indie Flower", cursive;
+}
+html {
+  height: 100%;
+}
+body {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to left,
+    rgb(253, 136, 136),
+    rgb(241, 241, 106)
+  );
+
+  background-repeat: none;
+}
+/* Formatting the Header */
+.header {
+  max-height: 15%;
+  min-height: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* background-color: bisque; */
+}
+
+.header__el {
+  margin: 1.2rem;
+}
+
+/* .header__el1 {
+  margin-top: 1.5rem;
+} */
+
+/*Colouring the Header*/
+.game__name {
+  font-size: 2.5rem;
+  /* position: relative; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1.2rem;
+  border-radius: 45% 22% / 91% 50%;
+  background-image: linear-gradient(
+    to left,
+    rgb(253, 136, 136),
+    rgb(241, 241, 106)
+  );
+  box-shadow: 0px -3px 14px rgb(127, 251, 44);
+  text-shadow: 0 0 3px #3cff00;
+}
+.game__name:active {
+  box-shadow: none;
+  border: 1px solid black;
+}
+.enter__name {
+  text-shadow: 0 0 3px #ff0000;
+}
+.enter__name2 {
+  text-shadow: 0 0 3px #e5ff00;
+}
+
+.save__name {
+  padding: 0.3rem;
+  border-radius: 100px;
+  border: 1px solid rgb(107, 3, 3);
+  box-shadow: -1px 0px 3px black;
+  background-color: orange;
+  font-weight: bold;
+}
+.save__name:active {
+  box-shadow: none;
+}
+
+/*Working on the Game Field*/
+.section {
+  margin-top: 10px;
+  min-height: 74%;
+  max-height: 74%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.grid__table {
+  min-width: 40%;
+  max-width: 40%;
+  display: grid;
+  grid-template-columns: repeat(7, 7fr);
+  grid-template-rows: repeat(6, 6fr);
+  column-gap: none;
+  row-gap: none;
+  /* border: 1px solid rgb(127, 251, 44);
+  box-shadow: 0px 0px 14px rgb(127, 251, 44); */
+}
+
+/*Colouring the Game Field*/
+.grid__el {
+  background-color: white;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid black;
+  border-radius: 200%;
+}
+
+.shadowed {
+  box-shadow: -1px 0 1px black;
+}
+
+.player__panel {
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 18%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 100px;
+  box-shadow: 0px 0px 14px rgb(127, 251, 44);
+}
+.player__panel:active {
+  box-shadow: none;
+  border: 1px solid black;
+}
+.yellow__player {
+  background-image: linear-gradient(to bottom left, #fff308, #fffee3);
+  text-shadow: 0 0 3px #ff0000;
+}
+
+.red__player {
+  background-image: linear-gradient(to bottom right, #fc220a, #fc8679);
+  text-shadow: 0 0 3px #fbff00;
+}
+
+/* Game Over Modal Window */
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 40%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(241, 241, 106),
+    rgb(253, 136, 136)
+  );
+  border: 1px solid rgb(233, 134, 134);
+}
+
+.buttonz {
+  padding: 0.3rem;
+  font-weight: bold;
+  border-radius: 100px;
+  border: 1px solid rgb(107, 3, 3);
+  box-shadow: -1px 0px 3px black;
+  background-color: orangered;
+}
+.btn__newGame:active {
+  box-shadow: none;
+}
+
+/*Game Reset Modal Window*/
+.modal2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 40%;
+  height: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  font-size: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(241, 241, 106),
+    rgb(253, 136, 136)
+  );
+  border: 1px solid rgb(233, 134, 134);
+}
+
+.btns__reset {
+  min-width: 90%;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+}
+.buttonz:active {
+  box-shadow: none;
+}
+
+/* Hiding Modal Windows and Input Fields */
+.hidden {
+  display: none;
+}
+
+.hidden1 {
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 54%;
+  left: 50%;
+  width: 45%;
+  height: 75%;
+  border-radius: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.copyright {
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  z-index: 12;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "connect-four",
+  "version": "1.0.0",
+  "description": "Connect Four Game",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeevDevs/connect-four.git"
+  },
+  "author": "Dmitriy Vnuchkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeevDevs/connect-four/issues"
+  },
+  "homepage": "https://github.com/DeevDevs/connect-four#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}
