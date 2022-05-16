@@ -191,23 +191,23 @@ btnNewGame.addEventListener("click", function (e) {
   startNewGame();
 });
 
-//Reset the Game / Cancel gameReset
-title.addEventListener("click", function () {
-  // blur.classList.remove("hidden");
-  // resetGameModal.classList.remove("hidden");
-  showHideElement(blur, "show");
-  showHideElement(resetGameModal, "show");
-});
-resetGame.addEventListener("click", function () {
-  location.reload();
-});
+// //Reset the Game / Cancel gameReset
+// title.addEventListener("click", function () {
+//   // blur.classList.remove("hidden");
+//   // resetGameModal.classList.remove("hidden");
+//   showHideElement(blur, "show");
+//   showHideElement(resetGameModal, "show");
+// });
+// resetGame.addEventListener("click", function () {
+//   location.reload();
+// });
 
-noResetGame.addEventListener("click", function () {
-  // resetGameModal.classList.add("hidden");
-  showHideElement(resetGameModal, "hide");
-  // blur.classList.add("hidden");
-  showHideElement(blur, "hide");
-});
+// noResetGame.addEventListener("click", function () {
+//   // resetGameModal.classList.add("hidden");
+//   showHideElement(resetGameModal, "hide");
+//   // blur.classList.add("hidden");
+//   showHideElement(blur, "hide");
+// });
 /////////////////////// Game Mechanics //////////////////////
 function whoIsWinner(move) {
   const moveMec = function (gr, move) {

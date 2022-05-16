@@ -13,6 +13,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
   background-image: linear-gradient(
     to left,
     rgb(253, 136, 136),
@@ -23,7 +24,7 @@ body {
 }
 /* Formatting the Header */
 .header {
-  height: 15%;
+  height: 8.5rem;
   max-height: calc(67.5 / 6);
   display: flex;
   flex-direction: row;
@@ -45,7 +46,7 @@ body {
   /* position: relative; */
   padding: 0 2rem;
   margin-top: 1.2rem;
-  border-radius: 45% 22% / 91% 50%;
+  border-radius: 45% 22% 91% 50%;
   background-image: linear-gradient(
     to left,
     rgb(253, 136, 136),
@@ -55,10 +56,10 @@ body {
   box-shadow: 0px -3px 14px rgb(127, 251, 44);
   text-shadow: 0 0 3px #3cff00;
 }
-.game__name:active {
+/* .game__name:active {
   box-shadow: none;
   border: 1px solid black;
-}
+} */
 .enter__name {
   font-size: 1.5rem;
   text-shadow: 0 0 3px #ff0000;
@@ -122,7 +123,7 @@ body {
 }
 
 .player__panel {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: bold;
   min-width: 18%;
   display: flex;
@@ -132,10 +133,10 @@ body {
   border-radius: 100px;
   box-shadow: 0px 0px 14px rgb(127, 251, 44);
 }
-.player__panel:active {
+/* .player__panel:active {
   box-shadow: none;
   border: 1px solid black;
-}
+} */
 .yellow__player {
   background-image: linear-gradient(to bottom left, #fff308, #fffee3);
   text-shadow: 0 0 3px #ff0000;
