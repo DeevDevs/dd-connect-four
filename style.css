@@ -19,13 +19,11 @@ body {
     rgb(253, 136, 136),
     rgb(241, 241, 106)
   );
-
-  /* background-repeat: none; */
 }
+
 /* Formatting the Header */
 .header {
   height: 8.5rem;
-  /* max-height: calc(67.5 / 6); */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -43,7 +41,6 @@ body {
 /*Colouring the Header*/
 .game__name {
   font-size: 2.5rem;
-  /* position: relative; */
   padding: 0 2rem;
   margin-top: 1.2rem;
   border-radius: 45% 22% 91% 50%;
@@ -56,14 +53,12 @@ body {
   box-shadow: 0px -3px 14px rgb(127, 251, 44);
   text-shadow: 0 0 3px #3cff00;
 }
-/* .game__name:active {
-  box-shadow: none;
-  border: 1px solid black;
-} */
+
 .enter__name {
   font-size: 1.5rem;
   text-shadow: 0 0 3px #ff0000;
 }
+
 .enter__name2 {
   font-size: 1.5rem;
   text-shadow: 0 0 3px #e5ff00;
@@ -79,6 +74,7 @@ body {
   background-color: orange;
   font-weight: bold;
 }
+
 .save__name:active {
   box-shadow: none;
 }
@@ -105,8 +101,6 @@ body {
   grid-template-rows: repeat(6, 6fr);
   column-gap: none;
   row-gap: none;
-  /* border: 1px solid rgb(127, 251, 44);
-  box-shadow: 0px 0px 14px rgb(127, 251, 44); */
 }
 
 /*Colouring the Game Field*/
@@ -133,10 +127,7 @@ body {
   border-radius: 100px;
   box-shadow: 0px 0px 14px rgb(127, 251, 44);
 }
-/* .player__panel:active {
-  box-shadow: none;
-  border: 1px solid black;
-} */
+
 .yellow__player {
   background-image: linear-gradient(to bottom left, #fff308, #fffee3);
   text-shadow: 0 0 3px #ff0000;
@@ -190,7 +181,6 @@ body {
 }
 
 .btn__newGame {
-  /* box-shadow: none; */
   font-size: 1.5rem;
 }
 
@@ -244,9 +234,7 @@ body {
 }
 
 .overlay {
-  /* display: block; */
   position: absolute;
-  /* transform: translate(-50%, -50%); */
   top: -2rem;
   left: -2rem;
   width: calc(100% + 4rem);
@@ -274,4 +262,25 @@ body {
 
 .greeting {
   text-align: right;
+}
+
+.modal-message {
+  position: absolute;
+  top: 6rem;
+  left: calc(50% - 10rem);
+  width: 20rem;
+  height: 5rem;
+  background-color: #fc220a;
+  text-align: center;
+  border-radius: 12px;
+  transition: opacity 0.3s ease-out;
+  cursor: default;
+  opacity: 0;
+}
+
+.modal-message p {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
